@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/button_material_dark</item>
+        <item name="colorPrimaryDark">@color/hint_foreground_material_light</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/TranslucentHeader</item>
+    </style>
+</resources>
