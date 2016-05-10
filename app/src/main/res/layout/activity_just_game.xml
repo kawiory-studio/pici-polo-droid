@@ -9,8 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pl.dom3k.picipolodelux.InsideGameActivity"
-    tools:showIn="@layout/app_bar_inside_game">
+    tools:context="pl.dom3k.picipolodelux.JustGameActivity">
 
     <EditText
         android:layout_width="90sp"
@@ -113,7 +112,8 @@
         android:layout_height="match_parent"
         android:id="@+id/linearLayout4"
         android:layout_below="@+id/pici_val"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="164sp"
@@ -148,5 +148,23 @@
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Game name:"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/gamename"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Blalalalalalalala"
+        android:id="@+id/gamename"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

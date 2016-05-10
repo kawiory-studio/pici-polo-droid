@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onNewGameClick(View view){
-        Intent i = new Intent(this,InsideGameActivity.class);
+        Intent i = new Intent(this,JustGameActivity.class);
         startActivity(i);
     }
 }

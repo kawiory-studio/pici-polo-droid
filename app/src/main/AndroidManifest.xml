@@ -15,10 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".InsideGameActivity"
-            android:label="@string/title_activity_inside_game"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".JustGameActivity"></activity>
     </application>
 
 </manifest>
