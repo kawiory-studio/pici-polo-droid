@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JustGameActivity"></activity>
+        <activity android:name=".JustGameActivity" />
+        <activity android:name=".GameCreatorActivity" />
+        <activity android:name=".WaitingRoomActivity"></activity>
     </application>
 
 </manifest>

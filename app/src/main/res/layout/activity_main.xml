@@ -46,14 +46,15 @@
             android:layout_height="wrap_content"
             android:text="How to play"
             android:id="@+id/button3"
-            android:background="#00ffffff"/>
+            android:background="#00ffffff"
+            android:onClick="onHowToClick" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Alpha"
+        android:text="Pici Polo"
         android:id="@+id/textView"
         android:layout_marginTop="132dp"
         android:layout_alignParentTop="true"
