@@ -44,36 +44,36 @@ public class ServerConnector {
     }
 
     static String userLogin(String userName, String userID) throws IOException {
-        return serverDialogue(String.format("user:%s:%s",userName,userID));
+        return serverDialogue(String.format("user:%s:%s:",userName,userID));
     }
 
     static String createPublicGame(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("create:%s:%s;public:%s",
+        return serverDialogue(String.format("create:%s:%s;public:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 
     static String playersMove(String gameName, int number, int cardNumber, Context context) throws IOException {
-        return serverDialogue(String.format("move:%s:%s:%s:%d:%d",
+        return serverDialogue(String.format("move:%s:%s:%s:%d:%d:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName,number,cardNumber));
     }
 
     static String turnAsk(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("waiting:%s:%s:%s",
+        return serverDialogue(String.format("waiting:%s:%s:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 
     static String currState(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("state:%s:%s:%s",
+        return serverDialogue(String.format("state:%s:%s:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 
     static String joinGame(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("join:%s:%s:%s",
+        return serverDialogue(String.format("join:%s:%s:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 
     static String getPubsList(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("public:%s:%s",
+        return serverDialogue(String.format("public:%s:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context)));
     }
 }
