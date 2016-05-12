@@ -33,13 +33,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="In order to play with us, pick yourself a name."
             android:id="@+id/textView11"
-            android:layout_below="@+id/name"
+            android:layout_below="@+id/creat_name"
             android:layout_alignParentLeft="true" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
+            android:id="@+id/creat_name"
             android:hint="Nick"
             android:layout_below="@+id/textView10"
             android:layout_alignParentLeft="true" />

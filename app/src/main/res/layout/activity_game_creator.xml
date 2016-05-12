@@ -31,7 +31,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
+            android:id="@+id/creat_name"
             android:hint="The Name Of The Game"
             android:layout_below="@+id/textView9"
             android:layout_alignRight="@+id/textView9"
@@ -43,7 +43,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Leave it blank to get fruity random one."
             android:id="@+id/textView8"
-            android:layout_below="@+id/name"
+            android:layout_below="@+id/creat_name"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp" />
 
@@ -63,7 +63,8 @@
             android:text="Begin"
             android:id="@+id/go_go"
             android:layout_below="@+id/private_check"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:onClick="onCreateClick" />
     </LinearLayout>
 
 </RelativeLayout>

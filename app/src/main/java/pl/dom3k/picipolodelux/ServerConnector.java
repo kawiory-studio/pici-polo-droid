@@ -48,7 +48,7 @@ public class ServerConnector {
     }
 
     static String createPublicGame(String gameName, Context context) throws IOException {
-        return serverDialogue(String.format("create:%s:%s:public:%s",
+        return serverDialogue(String.format("create:%s:%s;public:%s",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 

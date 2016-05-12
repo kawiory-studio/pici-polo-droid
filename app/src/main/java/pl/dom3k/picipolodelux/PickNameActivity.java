@@ -20,7 +20,7 @@ public class PickNameActivity extends AppCompatActivity {
 
     public void onButtClick(View view){
         Log.e("butt","Click!");
-        EditText et = (EditText) findViewById(R.id.name);
+        EditText et = (EditText) findViewById(R.id.creat_name);
         String name = et != null ? et.getText().toString() : null;
 
         if(name == null || name.isEmpty()){
@@ -36,12 +36,12 @@ public class PickNameActivity extends AppCompatActivity {
 
         String response = null;
         try {
-            Log.i("pickServer","Pytam serwer...");
+            Log.i("pickServer","Asking server...");
             response = ServerConnector.userLogin(name,PlayerState.getDeviceID(getApplicationContext()));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Log.i("pickServer","Serwer odpowiedział: "+response);
+        Log.i("pickServer","Server responded: "+response);
 
         if(response.equals("taken")){
             Snackbar.make(view, "This name is already taken. Pick another one, please.",
