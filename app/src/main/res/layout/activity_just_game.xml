@@ -162,9 +162,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Blalalalalalalala"
+        android:text="&lt;here comes the sun>"
         android:id="@+id/gamename"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let&apos;s roll"
+        android:id="@+id/roll"
+        android:background="#00ffffff"
+        android:onClick="onNewGameClick"
+        android:layout_below="@+id/pici_val"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
