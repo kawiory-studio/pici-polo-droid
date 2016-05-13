@@ -47,7 +47,7 @@
             android:textColor="@android:color/holo_red_dark"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0"
-            android:id="@+id/red_count" />
+            android:id="@+id/fst_count" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +75,7 @@
             android:textColor="@android:color/holo_blue_dark"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0"
-            android:id="@+id/blue_count" />
+            android:id="@+id/scnd_count" />
     </LinearLayout>
 
     <TextView
@@ -173,7 +173,7 @@
         android:text="Let&apos;s roll"
         android:id="@+id/roll"
         android:background="#00ffffff"
-        android:onClick="onNewGameClick"
+        android:onClick="onRollClick"
         android:layout_below="@+id/pici_val"
         android:layout_centerHorizontal="true" />
 

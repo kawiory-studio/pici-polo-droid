@@ -38,7 +38,7 @@ public class JoinGameActivity extends AppCompatActivity {
         }
         Log.i("pickServer","Server responded: "+response);
 
-        if(!response.equals("ok")){
+        if(response==null||(!response.equals("ok")&&!response.equals("already"))){
             String err;
             if(response.equals("full")) err = "The game is full.";
             else if (response.equals("nonexisting")) err = "Game with this name does not exist.";
