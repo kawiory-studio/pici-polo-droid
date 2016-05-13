@@ -46,7 +46,7 @@ public class JustGameActivity extends AppCompatActivity {
             String[] states = twoParts[1].split(":");
 
             publishProgress(String.format("%s picked %s number and rolled %s sign, which gives him %s difference" +
-                    "in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],states[0]),states[0],states[3],states[4]);
+                    "in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0]),states[0],states[3],states[4]);
 
             return null;
         }
@@ -126,7 +126,7 @@ public class JustGameActivity extends AppCompatActivity {
             state.setText("You can't move now. We have to wait.");
         }
         else{
-            String[] splitted = serverRes.split(";");
+            String[] splitted = serverRes.split(":");
             state.setText(String.format("You rolled %s sign, which leaves you with %s difference" +
                     "in your game value. Turn for %s.",splitted[2],splitted[4],splitted[5]));
             whoseTurn.setText(splitted[5]);

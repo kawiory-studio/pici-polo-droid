@@ -32,10 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/creat_name"
-            android:hint="The Name Of The Game"
-            android:layout_below="@+id/textView9"
-            android:layout_alignRight="@+id/textView9"
-            android:layout_alignEnd="@+id/textView9" />
+            android:hint="@string/the_name_of_the_game" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,8 +40,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Leave it blank to get fruity random one."
             android:id="@+id/textView8"
-            android:layout_below="@+id/creat_name"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp" />
 
         <CheckBox
