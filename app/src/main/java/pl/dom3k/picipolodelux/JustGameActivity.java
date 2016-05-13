@@ -38,7 +38,7 @@ public class JustGameActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                publishProgress(String.format("Waiting for turn of your opponent. (%d seconds)", count++));
+//                publishProgress(String.format("Waiting for turn of your opponent. (%d seconds)", count++));
             } while (serRes==null||serRes.equals("idle"));
 
             String[] twoParts = serRes.split(";");
@@ -64,7 +64,6 @@ public class JustGameActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            finish();
         }
     }
 
@@ -99,6 +98,8 @@ public class JustGameActivity extends AppCompatActivity {
         playerAName.setText(stateParts[3]);
         playerBName.setText(stateParts[4]);
         whoseTurn.setText(stateParts[2]);
+        firstCount.setText(stateParts[5]);
+        secondCount.setText(stateParts[6]);
 
         String stateS = stateParts[2].equals(PlayerState.getUsername(getApplicationContext()))?
                 "Your turn. Pick a number." : (String.format("Turn of player %s.",stateParts[2]));
