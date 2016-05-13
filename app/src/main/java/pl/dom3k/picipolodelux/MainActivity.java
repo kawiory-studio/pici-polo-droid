@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void onJoinGameClick(View view){
+        Intent i = new Intent(this,JoinGameActivity.class);
+        startActivity(i);
+    }
+
     public void onSettingsClick(View view){
         Intent i = new Intent(this, PickNameActivity.class);
         startActivity(i);

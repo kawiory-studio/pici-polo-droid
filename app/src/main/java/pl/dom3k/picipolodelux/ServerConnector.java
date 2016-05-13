@@ -2,6 +2,7 @@ package pl.dom3k.picipolodelux;
 
 import android.content.Context;
 import android.os.StrictMode;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,10 +33,12 @@ public class ServerConnector {
         BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter bw = new PrintWriter(s.getOutputStream(),true);
 
+        Log.i("serverQuery",query);
         bw.println(query);
         bw.flush();
 
         String servAnsw = br.readLine();
+        Log.i("serverResponse",servAnsw);
 
         br.close();
         bw.close();
