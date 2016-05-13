@@ -23,13 +23,6 @@ public class JustGameActivity extends AppCompatActivity {
 
     public JustGameActivity(){
         super();
-        playerAName = (TextView) findViewById(R.id.player1);
-        playerBName = (TextView) findViewById(R.id.player2);
-        firstCount = (TextView) findViewById(R.id.fst_count);
-        secondCount = (TextView) findViewById(R.id.scnd_count);
-        whoseTurn = (TextView) findViewById(R.id.whose_turn);
-        state = (TextView) findViewById(R.id.state);
-        number = (EditText) findViewById(R.id.pici_val);
     }
 
     class OpponentMoveWaiter extends AsyncTask<String, String, String> {
@@ -41,7 +34,7 @@ public class JustGameActivity extends AppCompatActivity {
             do {
                 SystemClock.sleep(1000);
                 try {
-                    serRes = ServerConnector.currState(gameName, getApplicationContext());
+                    serRes = ServerConnector.turnAsk(gameName, getApplicationContext());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -79,6 +72,14 @@ public class JustGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_just_game);
+
+        playerAName = (TextView) findViewById(R.id.player1);
+        playerBName = (TextView) findViewById(R.id.player2);
+        firstCount = (TextView) findViewById(R.id.fst_count);
+        secondCount = (TextView) findViewById(R.id.scnd_count);
+        whoseTurn = (TextView) findViewById(R.id.whose_turn);
+        state = (TextView) findViewById(R.id.state);
+        number = (EditText) findViewById(R.id.pici_val);
 
 //        JustGameActivity();
 
