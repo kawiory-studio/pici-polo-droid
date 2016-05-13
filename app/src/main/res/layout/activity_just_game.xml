@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/holo_red_dark"
-            android:text="Red team"
-            android:id="@+id/textView3" />
+            android:text="Player A"
+            android:id="@+id/player1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,8 +66,8 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_blue_dark"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Blue team"
-            android:id="@+id/textView5" />
+            android:text="Player B"
+            android:id="@+id/player2" />
 
         <TextView
             android:layout_width="wrap_content"
