@@ -41,7 +41,7 @@ public class JoinGameActivity extends AppCompatActivity {
         if(response==null||(!response.equals("ok")&&!response.equals("already"))){
             String err;
             if(response.equals("full")) err = "The game is full.";
-            else if (response.equals("nonexisting")) err = "Game with this name does not exist.";
+            else if (response.equals("nonexistent")) err = "Game with this name does not exist.";
             else err = "Some error occured, non-specific one. Where is our God?";
             Snackbar.make(view, err,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
