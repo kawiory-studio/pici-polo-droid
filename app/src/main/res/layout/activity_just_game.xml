@@ -24,7 +24,8 @@
         android:layout_centerHorizontal="true"
         android:enabled="true"
         android:editable="false"
-        android:focusable="false" />
+        android:focusable="false"
+        android:visibility="gone" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -86,8 +87,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="It&apos;s your turn. Pick a number."
         android:id="@+id/state"
-        android:layout_above="@+id/pici_val"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/gamename"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -174,15 +176,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onNumberPick">
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:onClick="onNumberPick"
             android:layout_marginBottom="4sp">
 
             <Button
@@ -218,7 +218,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:onClick="onNumberPick"
             android:layout_marginBottom="4sp">
 
             <Button
@@ -253,8 +252,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:onClick="onNumberPick">
+            android:layout_gravity="center_horizontal">
 
             <Button
                 android:layout_width="wrap_content"
