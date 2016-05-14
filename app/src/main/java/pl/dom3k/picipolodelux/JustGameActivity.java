@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -46,7 +47,7 @@ public class JustGameActivity extends AppCompatActivity {
             String[] states = twoParts[1].split(":");
 
             publishProgress(String.format("%s picked %s number and rolled %s sign, which gives him %s difference" +
-                    "in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0]),states[0],states[3],states[4]);
+                    " in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0]),states[0],states[3],states[4]);
 
             return null;
         }
@@ -110,6 +111,14 @@ public class JustGameActivity extends AppCompatActivity {
 
     }
 
+    public void onNumberPick(View view) {
+        Button bt = (Button) view;
+        String num = bt.getText().toString();
+        number.setText(num);
+
+        onRollClick(view);
+    }
+
     public void onRollClick(View view) {
         String value = number.getText().toString();
         if(value.isEmpty()){
@@ -129,7 +138,7 @@ public class JustGameActivity extends AppCompatActivity {
         else{
             String[] splitted = serverRes.split(":");
             state.setText(String.format("You rolled %s sign, which leaves you with %s difference" +
-                    "in your game value. Turn for %s.",splitted[2],splitted[4],splitted[5]));
+                    " in your game value. Turn for %s.",splitted[2],splitted[4],splitted[5]));
             whoseTurn.setText(splitted[5]);
             firstCount.setText(splitted[8]);
             secondCount.setText(splitted[9]);
