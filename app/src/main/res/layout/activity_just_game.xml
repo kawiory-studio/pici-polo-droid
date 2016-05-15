@@ -306,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="8"
+                android:text="0"
                 android:id="@+id/rolledNum"
                 android:textSize="38sp"
                 android:layout_gravity="center_horizontal" />
@@ -334,7 +334,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="-429091"
+                android:text="0"
                 android:id="@+id/rolledDiff"
                 android:layout_gravity="center_horizontal"
                 android:textSize="38sp" />
@@ -362,7 +362,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="+"
+                android:text="-"
                 android:id="@+id/rolledSign"
                 android:layout_gravity="center_horizontal"
                 android:textSize="38sp" />
@@ -373,7 +373,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="%s&apos;s move:"
+        android:text="@string/whose_last"
         android:textAllCaps="true"
         android:id="@+id/lastTurnPerson"
         android:layout_above="@+id/relativeLayout"

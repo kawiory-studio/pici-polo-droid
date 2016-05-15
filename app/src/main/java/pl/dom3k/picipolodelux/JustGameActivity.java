@@ -65,7 +65,7 @@ public class JustGameActivity extends AppCompatActivity {
                     whoseTurn.setText(progress[1]);
                     firstCount.setText(progress[2]);
                     secondCount.setText(progress[3]);
-                    lastTurnPerson.setText(progress[4]);
+                    lastTurnPerson.setText(getString(R.string.whose_last,progress[4]));
                     rolledNum.setText(progress[5]);
                     rolledSign.setText(progress[6]);
                     rolledDiff.setText(progress[7]);
@@ -118,6 +118,7 @@ public class JustGameActivity extends AppCompatActivity {
         whoseTurn.setText(stateParts[2]);
         firstCount.setText(stateParts[5]);
         secondCount.setText(stateParts[6]);
+        lastTurnPerson.setText("The game begun.");
 
         String stateS = stateParts[2].equals(PlayerState.getUsername(getApplicationContext()))?
                 "Your turn. Pick a number." : (String.format("Turn of player %s.",stateParts[2]));
@@ -159,6 +160,10 @@ public class JustGameActivity extends AppCompatActivity {
             whoseTurn.setText(splitted[5]);
             firstCount.setText(splitted[8]);
             secondCount.setText(splitted[9]);
+            lastTurnPerson.setText(getString(R.string.whose_last,PlayerState.getUsername(getApplicationContext())));
+            rolledNum.setText(value);
+            rolledSign.setText(splitted[2]);
+            rolledDiff.setText(splitted[4]);
 
             new OpponentMoveWaiter().execute();
         }
