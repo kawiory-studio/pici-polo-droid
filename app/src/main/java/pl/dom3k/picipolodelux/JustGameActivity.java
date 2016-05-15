@@ -44,7 +44,7 @@ public class JustGameActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 //                publishProgress(String.format("Waiting for turn of your opponent. (%d seconds)", count++));
-            } while (serRes==null||serRes.equals("idle"));
+            } while (serRes==null||serRes.equals("idle")||serRes.equals("beginning"));
 
             String[] twoParts = serRes.split(";");
             String[] diffs = twoParts[0].split(":");
