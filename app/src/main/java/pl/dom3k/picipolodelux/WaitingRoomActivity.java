@@ -27,7 +27,7 @@ public class WaitingRoomActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 publishProgress(String.format("Still waiting, for %d seconds...",count++));
-            } while(serRes==null||serRes.split(":")[2].isEmpty());
+            } while(serRes==null||serRes.startsWith("lonely")||serRes.split(":")[2].isEmpty());
 
             publishProgress(String.format("Connected. Playing with %s",serRes.split(":")[4]));
             SystemClock.sleep(1000);
