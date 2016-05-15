@@ -85,16 +85,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="It&apos;s your turn. Pick a number."
-        android:id="@+id/state"
-        android:layout_below="@+id/gamename"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Turn for:"
         android:id="@+id/textView6"
         android:layout_alignParentTop="true"
@@ -176,7 +166,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout3">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -282,6 +273,130 @@
                 android:onClick="onNumberPick" />
         </LinearLayout>
 
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativeLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Number"
+                android:textAllCaps="true"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="8"
+                android:id="@+id/rolledNum"
+                android:textSize="38sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Difference"
+                android:textAllCaps="true"
+                android:id="@+id/textView12"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="-429091"
+                android:id="@+id/rolledDiff"
+                android:layout_gravity="center_horizontal"
+                android:textSize="38sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Sign"
+                android:textAllCaps="true"
+                android:id="@+id/textView13"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="+"
+                android:id="@+id/rolledSign"
+                android:layout_gravity="center_horizontal"
+                android:textSize="38sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="%s&apos;s move:"
+        android:textAllCaps="true"
+        android:id="@+id/lastTurnPerson"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/pici_val"
+        android:layout_toRightOf="@+id/pici_val"
+        android:layout_above="@+id/lastTurnPerson"
+        android:layout_below="@+id/gamename"
+        android:layout_marginTop="24sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="It&apos;s your turn. Pick a number."
+            android:id="@+id/state"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
 </RelativeLayout>

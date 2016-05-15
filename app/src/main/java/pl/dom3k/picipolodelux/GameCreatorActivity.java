@@ -28,11 +28,18 @@ public class GameCreatorActivity extends AppCompatActivity {
         try {
             response = ServerConnector.createPublicGame(name,getApplicationContext());
         } catch (IOException e) {
+            response = "error";
             e.printStackTrace();
         }
         if(response.equals("taken")){
             Snackbar.make(view, "This name is already taken. Pick another one, please.",
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            return;
+        }
+        else if(response.equals("error")){
+            Snackbar.make(view, "Something is no yes.",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            finish();
             return;
         }
 

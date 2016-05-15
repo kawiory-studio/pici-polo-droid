@@ -34,7 +34,11 @@ public class JoinGameActivity extends AppCompatActivity {
             Log.i("pickServer","Asking server...");
             response = ServerConnector.joinGame(name,getApplicationContext());
         } catch (IOException e) {
+            Snackbar.make(view, "Something is no yes.",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            finish();
             e.printStackTrace();
+            return;
         }
         Log.i("pickServer","Server responded: "+response);
 

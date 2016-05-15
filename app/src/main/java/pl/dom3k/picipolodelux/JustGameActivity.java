@@ -19,6 +19,10 @@ public class JustGameActivity extends AppCompatActivity {
     TextView whoseTurn;
     TextView state;
     EditText number;
+    TextView lastTurnPerson;
+    TextView rolledNum;
+    TextView rolledSign;
+    TextView rolledDiff;
 
     String gameName=null;
 
@@ -47,7 +51,8 @@ public class JustGameActivity extends AppCompatActivity {
             String[] states = twoParts[1].split(":");
 
             publishProgress(String.format("%s picked %s number and rolled %s sign, which gives him %s difference" +
-                    " in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0]),states[0],states[3],states[4]);
+                    " in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0])
+                    ,states[0],states[3],states[4],diffs[2],diffs[3],diffs[4],diffs[5]);
 
             return null;
         }
@@ -56,10 +61,14 @@ public class JustGameActivity extends AppCompatActivity {
             if (state != null) {
                 state.setText(progress[0]);
 
-                if(progress.length==4){
+                if(progress.length==8){
                     whoseTurn.setText(progress[1]);
                     firstCount.setText(progress[2]);
                     secondCount.setText(progress[3]);
+                    lastTurnPerson.setText(progress[4]);
+                    rolledNum.setText(progress[5]);
+                    rolledSign.setText(progress[6]);
+                    rolledDiff.setText(progress[7]);
                 }
             }
         }
@@ -80,6 +89,14 @@ public class JustGameActivity extends AppCompatActivity {
         whoseTurn = (TextView) findViewById(R.id.whose_turn);
         state = (TextView) findViewById(R.id.state);
         number = (EditText) findViewById(R.id.pici_val);
+        lastTurnPerson = (TextView) findViewById(R.id.lastTurnPerson);
+        rolledNum = (TextView) findViewById(R.id.rolledNum);
+        rolledSign = (TextView) findViewById(R.id.rolledSign);
+        rolledDiff = (TextView) findViewById(R.id.rolledDiff);
+        state = (TextView) findViewById(R.id.state);
+        state = (TextView) findViewById(R.id.state);
+        state = (TextView) findViewById(R.id.state);
+
 
 //        JustGameActivity();
 

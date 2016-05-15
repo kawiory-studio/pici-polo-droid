@@ -40,6 +40,12 @@ public class PickNameActivity extends AppCompatActivity {
             response = ServerConnector.userLogin(name,PlayerState.getDeviceID(getApplicationContext()));
         } catch (IOException e) {
             e.printStackTrace();
+            Snackbar.make(view, "Something is no yes.",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            finish();
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+            return;
         }
         Log.i("pickServer","Server responded: "+response);
 
