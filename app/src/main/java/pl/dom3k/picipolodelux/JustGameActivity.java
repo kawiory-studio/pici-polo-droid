@@ -50,8 +50,7 @@ public class JustGameActivity extends AppCompatActivity {
             String[] diffs = twoParts[0].split(":");
             String[] states = twoParts[1].split(":");
 
-            publishProgress(String.format("%s picked %s number and rolled %s sign, which gives him %s difference" +
-                    " in his game value. Turn for %s.",diffs[2],diffs[3],diffs[4],diffs[5],states[0])
+            publishProgress(String.format(getString(R.string.oth_turn_desc),diffs[2],diffs[3],diffs[4],diffs[5],states[0])
                     ,states[0],states[3],states[4],diffs[2],diffs[3],diffs[4],diffs[5]);
 
             return null;
@@ -121,7 +120,7 @@ public class JustGameActivity extends AppCompatActivity {
         lastTurnPerson.setText("The game begun.");
 
         String stateS = stateParts[2].equals(PlayerState.getUsername(getApplicationContext()))?
-                "Your turn. Pick a number." : (String.format("Turn of player %s.",stateParts[2]));
+                getString(R.string.your_turn_desc) : (String.format(getString(R.string.turn_for_desc),stateParts[2]));
         state.setText(stateS);
         if(!stateParts[2].equals(PlayerState.getUsername(getApplicationContext()))){
             new OpponentMoveWaiter().execute();
@@ -140,7 +139,7 @@ public class JustGameActivity extends AppCompatActivity {
     public void onRollClick(View view) {
         String value = number.getText().toString();
         if(value.isEmpty()){
-            state.setText("Put in a number if you want to roll.");
+            state.setText(R.string.pick_to_roll);
             return;
         }
         String serverRes = null;
@@ -151,12 +150,11 @@ public class JustGameActivity extends AppCompatActivity {
         }
         if(serverRes==null) return;
         if(serverRes.equals("forbidden")){
-            state.setText("You can't move now. We have to wait.");
+            state.setText(R.string.illegal_move_desc);
         }
         else{
             String[] splitted = serverRes.split(":");
-            state.setText(String.format("You rolled %s sign, which leaves you with %s difference" +
-                    " in your game value. Turn for %s.",splitted[2],splitted[4],splitted[5]));
+            state.setText(String.format(getString(R.string.your_result_desc),splitted[2],splitted[4],splitted[5]));
             whoseTurn.setText(splitted[5]);
             firstCount.setText(splitted[8]);
             secondCount.setText(splitted[9]);

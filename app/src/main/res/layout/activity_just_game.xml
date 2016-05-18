@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/holo_red_dark"
-            android:text="Player A"
+            android:text="@string/player_a"
             android:id="@+id/player1" />
 
         <TextView
@@ -57,11 +57,11 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="end"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:gravity="right"
+        android:gravity="end"
         android:id="@+id/linearLayout2">
 
         <TextView
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_blue_dark"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Player B"
+            android:text="@string/player_b"
             android:id="@+id/player2" />
 
         <TextView
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Turn for:"
+        android:text="@string/turn_for"
         android:id="@+id/textView6"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -147,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Game name:"
+        android:text="@string/name_of_the_game"
         android:id="@+id/textView4"
         android:layout_below="@+id/whose_turn"
         android:layout_centerHorizontal="true" />
@@ -156,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="&lt;here comes the sun>"
+        android:text="@string/here_comes_the_sun_placeholder"
         android:id="@+id/gamename"
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />
@@ -297,7 +297,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Number"
+                android:text="@string/number_ingame"
                 android:textAllCaps="true"
                 android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal" />
@@ -325,7 +325,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Difference"
+                android:text="@string/difference_ingame"
                 android:textAllCaps="true"
                 android:id="@+id/textView12"
                 android:layout_gravity="center_horizontal" />
@@ -353,7 +353,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Sign"
+                android:text="@string/sign_ingame"
                 android:textAllCaps="true"
                 android:id="@+id/textView13"
                 android:layout_gravity="center_horizontal" />
@@ -394,7 +394,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="It&apos;s your turn. Pick a number."
+            android:text="@string/your_turn_desc"
             android:id="@+id/state"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>

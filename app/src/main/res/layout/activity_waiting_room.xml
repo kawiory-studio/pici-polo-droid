@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="&lt;here comes the sun>"
+        android:text="@string/here_comes_the_sun_placeholder"
         android:id="@+id/gamename"
         android:textColor="#000000"
         android:layout_below="@+id/textView7"

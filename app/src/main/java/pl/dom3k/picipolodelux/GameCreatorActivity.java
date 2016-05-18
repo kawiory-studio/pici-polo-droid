@@ -32,12 +32,12 @@ public class GameCreatorActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if(response.equals("taken")){
-            Snackbar.make(view, "This name is already taken. Pick another one, please.",
+            Snackbar.make(view, R.string.taken_name_notif,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             return;
         }
         else if(response.equals("error")){
-            Snackbar.make(view, "Something is no yes.",
+            Snackbar.make(view, R.string.sth_no_yes,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             finish();
             return;

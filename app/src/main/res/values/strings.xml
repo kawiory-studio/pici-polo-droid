@@ -1,11 +1,43 @@
 <resources>
     <string name="app_name">Pici Polo Delux</string>
-    <string name="title_activity_inside_game">InsideGameActivity</string>
+    <string name="title_activity_inside_game">Game Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="the_name_of_the_game">The Name Of The Game</string>
-    <string name="whose_last">%s\'s move:</string>
+    <string name="the_name_of_the_game" translatable="false">The Name Of The Game</string>
+    <string name="whose_last" formatted="false">%s\'s move:</string>
+    <string name="taken_name_notif">This name is already taken. Pick another one, please.</string>
+    <string name="sth_no_yes">Something is no yes.</string>
+    <string name="give_name_notif">Name a game you want to join.</string>
+    <string name="game_not_exist_notif">Game with this name does not exist.</string>
+    <string name="game_full_notif">The game is full.</string>
+    <string name="non_specific_err">Some error occured, non-specific one. Where is our God?</string>
+    <string name="oth_turn_desc" formatted="false">%s picked %s number and rolled %s sign, which gives him %s difference in his game value. Turn for %s.</string>
+    <string name="your_turn_desc">Your turn. Pick a number.</string>
+    <string name="turn_for_desc" formatted="false">Turn of player %s.</string>
+    <string name="pick_to_roll">Put in a number if you want to roll.</string>
+    <string name="illegal_move_desc" formatted="false">You can\'t move now. We have to wait.</string>
+    <string name="your_result_desc" formatted="false">You rolled %s sign, which leaves you with %s difference in your game value. Turn for %s.</string>
+    <string name="pick_name_fsure">Pick yourself a name. You\'ll need this.</string>
+    <string name="lol_forbidden_name">This name is forbidden. How did you even come up with one like this?</string>
+    <string name="name_taken_pick_notif">This name is already taken. Pick another one, please.</string>
+    <string name="still_waitin">Still waiting, for %d seconds...</string>
+    <string name="connection_success_notif">Connected. Playing with %s</string>
+    <string name="make_yourself_a_pici_polo">Make yourself a Pici Polo!</string>
+    <string name="leave_it_blank_to_get_fruity_random_one">Leave it blank to get fruity random one.</string>
+    <string name="private_game">Private game</string>
+    <string name="begin">Begin</string>
+    <string name="game_name">Game name</string>
+    <string name="join">Join</string>
+    <string name="join_a_game">Join a game</string>
+    <string name="player_a">Player A</string>
+    <string name="player_b">Player B</string>
+    <string name="turn_for">Turn for:</string>
+    <string name="name_of_the_game">Game name:</string>
+    <string name="here_comes_the_sun_placeholder" translatable="false"><![CDATA[<here comes the sun>]]></string>
+    <string name="number_ingame">Number</string>
+    <string name="difference_ingame">Difference</string>
+    <string name="sign_ingame">Sign</string>
 </resources>

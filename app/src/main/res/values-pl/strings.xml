@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pici Polo Delux</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="begin">Rozpocznij</string>
+    <string name="connection_success_notif" formatted="false">Połączono. Twój przeciwnik to %s</string>
+    <string name="difference_ingame">Różnica</string>
+    <string name="game_full_notif">Ta gra jest pełna.</string>
+    <string name="game_name">Nazwa gry</string>
+    <string name="game_not_exist_notif">Gra o tej nazwie nie istnieje.</string>
+    <string name="give_name_notif">Nazwij grę do której chcesz dołączyć.</string>
+    <string name="illegal_move_desc">Nie możesz się teraz poruszyć. Czekamy.</string>
+    <string name="join">Dołącz</string>
+    <string name="join_a_game">Dołącz do gry</string>
+    <string name="leave_it_blank_to_get_fruity_random_one">Pozostaw puste, aby dostać losową-owocową nazwę.</string>
+    <string name="lol_forbidden_name">Ta nazwa jest zabroniona. Jak w ogóle byłeś w stanie to wymyślić?</string>
+    <string name="make_yourself_a_pici_polo">Utwórz sobie Pici Polo!</string>
+    <string name="name_of_the_game">Nazwa gry:</string>
+    <string name="name_taken_pick_notif">Ta nazwa jest zajęta. Wybierz inną, proszę.</string>
+    <string name="navigation_drawer_close"></string>
+    <string name="non_specific_err">Wystąpił nieznany błąd. Gdzie jest teraz nasz Bóg?</string>
+    <string name="number_ingame">Numer</string>
+    <string name="oth_turn_desc" formatted="false">%s wybrał(a) numer %s  i wylosował(a) znak %s, co daje różnicę %s w jego grze. Tura gracza %s.</string>
+    <string name="pick_name_fsure">Wybierz sobie nazwę. Przyda się.</string>
+    <string name="pick_to_roll">Wprowadź numer jeśli chcesz losować.</string>
+    <string name="player_a">Gracz A</string>
+    <string name="player_b">Gracz B</string>
+    <string name="private_game">Gra prywatna</string>
+    <string name="sign_ingame">Znak</string>
+    <string name="sth_no_yes">Coś jest nie tak.</string>
+    <string name="still_waitin" formatted="false">Wciąż czekamy, %d sekund...</string>
+    <string name="taken_name_notif">Ta nazwa jest już zajęta. Wybierz inną, proszę.</string>
+    <string name="title_activity_inside_game">Aktywność gry</string>
+    <string name="turn_for">Tura gracza </string>
+    <string name="turn_for_desc" formatted="false">Tura gracza %s.</string>
+    <string name="whose_last" formatted="false">Ruch gracza %s:</string>
+    <string name="your_result_desc" formatted="false">Wylosowałeś znak %s, co daje Ci różnicę %s w wartości Twojej gry. Tura gracza %s.</string>
+    <string name="your_turn_desc">Twoja tura. Wybierz numer.</string>
+</resources>

@@ -24,12 +24,12 @@ public class PickNameActivity extends AppCompatActivity {
         String name = et != null ? et.getText().toString() : null;
 
         if(name == null || name.isEmpty()){
-            Snackbar.make(view, "Pick yourself a name. You'll need this.", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, R.string.pick_name_fsure, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
             return;
         }
         if(name.equals("=!NAMELESS~!")){
-            Snackbar.make(view, "This name is forbidden. How did you even come up with one like this?",
+            Snackbar.make(view, R.string.lol_forbidden_name,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             return;
         }
@@ -40,7 +40,7 @@ public class PickNameActivity extends AppCompatActivity {
             response = ServerConnector.userLogin(name,PlayerState.getDeviceID(getApplicationContext()));
         } catch (IOException e) {
             e.printStackTrace();
-            Snackbar.make(view, "Something is no yes.",
+            Snackbar.make(view, R.string.sth_no_yes,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             finish();
             Intent i = new Intent(this,MainActivity.class);
@@ -50,7 +50,7 @@ public class PickNameActivity extends AppCompatActivity {
         Log.i("pickServer","Server responded: "+response);
 
         if(response.equals("taken")){
-            Snackbar.make(view, "This name is already taken. Pick another one, please.",
+            Snackbar.make(view, R.string.name_taken_pick_notif,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             return;
         }

@@ -25,10 +25,10 @@
             android:layout_gravity="center_horizontal">
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/game_name"
-                android:hint="Game name"
+                android:hint="@string/game_name"
                 android:layout_below="@+id/textView10"
                 android:layout_alignParentLeft="true"
                 android:layout_weight="1" />
@@ -36,7 +36,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Join"
+                android:text="@string/join"
                 android:id="@+id/button5"
                 android:layout_below="@+id/checkBox"
                 android:layout_alignParentLeft="true"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Join a game"
+        android:text="@string/join_a_game"
         android:id="@+id/textView5"
         android:textSize="24sp"
         android:layout_alignParentTop="true"

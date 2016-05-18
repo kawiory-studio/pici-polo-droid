@@ -24,7 +24,7 @@ public class JoinGameActivity extends AppCompatActivity {
         String name = et != null ? et.getText().toString() : null;
 
         if(name == null || name.isEmpty()){
-            Snackbar.make(view, "Name a game you want to join.", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, R.string.give_name_notif, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
             return;
         }
@@ -34,7 +34,7 @@ public class JoinGameActivity extends AppCompatActivity {
             Log.i("pickServer","Asking server...");
             response = ServerConnector.joinGame(name,getApplicationContext());
         } catch (IOException e) {
-            Snackbar.make(view, "Something is no yes.",
+            Snackbar.make(view, R.string.sth_no_yes,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             finish();
             e.printStackTrace();
@@ -44,9 +44,9 @@ public class JoinGameActivity extends AppCompatActivity {
 
         if(response==null||(!response.equals("ok")&&!response.equals("already"))){
             String err;
-            if(response.equals("full")) err = "The game is full.";
-            else if (response.equals("nonexistent")) err = "Game with this name does not exist.";
-            else err = "Some error occured, non-specific one. Where is our God?";
+            if(response.equals("full")) err = getString(R.string.game_full_notif);
+            else if (response.equals("nonexistent")) err = getString(R.string.game_not_exist_notif);
+            else err = getString(R.string.non_specific_err);
             Snackbar.make(view, err,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
             return;

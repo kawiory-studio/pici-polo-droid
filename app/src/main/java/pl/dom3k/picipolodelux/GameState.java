@@ -21,7 +21,7 @@ public class GameState{
     public static final int MUL = 3;
     public static final int DIV = 4;
     public static final int POW = 10;
-    public static final int SIL = 20;
+    public static final int FCT = 20;
 
 
     /**
@@ -31,7 +31,7 @@ public class GameState{
     static public int getAction(int whichChosen){
         int random = (int) (Math.random()*100);
         if   (random%25==0) return POW;
-        else if(random==99) return SIL;
+        else if(random==99) return FCT;
         else
             return (random%4+1);
     }
