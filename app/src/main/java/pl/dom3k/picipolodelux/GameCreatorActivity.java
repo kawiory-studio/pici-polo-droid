@@ -36,6 +36,21 @@ public class GameCreatorActivity extends AppCompatActivity {
         EditText nameET = (EditText) findViewById(R.id.creat_name);
         String name = nameET != null ? nameET.getText().toString() : null;
 
+        CheckBox tick = (CheckBox) findViewById(R.id.is_hotseat);
+
+        if(tick.isChecked()){
+            EditText leftPlayerName = (EditText) findViewById(R.id.leftPlayerName);
+            EditText rightPlayerName = (EditText) findViewById(R.id.rightPlayerName);
+
+            Intent i = new Intent(this,HotseatGameActivity.class);
+            i.putExtra("GAMENAME",name);
+            i.putExtra("LEFTPNAME",leftPlayerName.getText().toString());
+            i.putExtra("RIGHTPNAME",rightPlayerName.getText().toString());
+            startActivity(i);
+            finish();
+            return;
+        }
+
         String response = null;
         try {
             response = ServerConnector.createPublicGame(name,getApplicationContext());
@@ -51,7 +66,6 @@ public class GameCreatorActivity extends AppCompatActivity {
         else if(response.equals("error")){
             Snackbar.make(view, R.string.sth_no_yes,
                     Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            finish();
             return;
         }
 
@@ -62,5 +76,6 @@ public class GameCreatorActivity extends AppCompatActivity {
         Intent i = new Intent(this,WaitingRoomActivity.class);
         i.putExtra("GAMENAME",name);
         startActivity(i);
+        finish();
     }
 }

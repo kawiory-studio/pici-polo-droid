@@ -49,6 +49,9 @@ public class HotseatGameActivity extends AppCompatActivity {
         state = (TextView) findViewById(R.id.state);
 
         gameName = getIntent().getStringExtra("GAMENAME");
+        playerAName.setText(getIntent().getStringExtra("LEFTPNAME"));
+        playerBName.setText(getIntent().getStringExtra("RIGHTPNAME"));
+
         String gameState = null;
 
         try {
