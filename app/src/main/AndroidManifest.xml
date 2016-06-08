@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".JustGameActivity" />
+        <activity android:name=".HotseatGameActivity" />
         <activity android:name=".GameCreatorActivity" />
         <activity android:name=".WaitingRoomActivity" />
         <activity android:name=".PickNameActivity" />
