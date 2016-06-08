@@ -34,18 +34,38 @@ public class GameCreatorActivity extends AppCompatActivity {
 
     public void onCreateClick(View view){
         EditText nameET = (EditText) findViewById(R.id.creat_name);
-        String name = nameET != null ? nameET.getText().toString() : null;
+        String name = nameET != null ? nameET.getText().toString() : "";
 
         CheckBox tick = (CheckBox) findViewById(R.id.is_hotseat);
 
         if(tick.isChecked()){
             EditText leftPlayerName = (EditText) findViewById(R.id.leftPlayerName);
             EditText rightPlayerName = (EditText) findViewById(R.id.rightPlayerName);
-
+            String p1 = leftPlayerName.getText().toString();
+            String p2 = rightPlayerName.getText().toString();
+            if (p1.equals("")||p2.equals("")){
+                Snackbar.make(view, "FILL NAME FIEELDS",
+                        Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                return;
+            }
+            String response;
+            try {
+                if ((response = HotSeatStorage.addGame(name, new String[]{p1, p2}, "")).startsWith("create")) {
+                    name = response.split(":")[1];
+                }else{
+                    Snackbar.make(view, R.string.taken_name_notif,
+                            Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                    return;
+                }
+            }catch(Exception e){
+                Snackbar.make(view, R.string.sth_no_yes,
+                        Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                return;
+            }
             Intent i = new Intent(this,HotseatGameActivity.class);
             i.putExtra("GAMENAME",name);
-            i.putExtra("LEFTPNAME",leftPlayerName.getText().toString());
-            i.putExtra("RIGHTPNAME",rightPlayerName.getText().toString());
+            i.putExtra("LEFTPNAME",p1);
+            i.putExtra("RIGHTPNAME",p2);
             startActivity(i);
             finish();
             return;
