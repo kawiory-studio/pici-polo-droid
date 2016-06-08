@@ -6,7 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import java.io.IOException;
 
@@ -18,6 +20,16 @@ public class GameCreatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game_creator);
 
 
+    }
+
+    public void onHotSeatChanged(View view){
+        CheckBox tick = (CheckBox) findViewById(R.id.is_hotseat);
+        LinearLayout hotSeatSettings = (LinearLayout) findViewById(R.id.hotSeatSets);
+        if(tick.isChecked()){
+            hotSeatSettings.setVisibility(View.VISIBLE);
+        }
+        else
+            hotSeatSettings.setVisibility(View.GONE);
     }
 
     public void onCreateClick(View view){

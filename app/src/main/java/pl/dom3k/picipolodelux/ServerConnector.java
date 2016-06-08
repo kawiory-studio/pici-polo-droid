@@ -1,6 +1,7 @@
 package pl.dom3k.picipolodelux;
 
 import android.content.Context;
+import android.os.StrictMode;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -25,8 +26,8 @@ public class ServerConnector {
           to keep it this way for a moment, especially knowing that server is ought to respond
           immediately for any query.*/
 
-//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//        StrictMode.setThreadPolicy(policy);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         Socket s = new Socket(ADDR,PORT);
         BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));

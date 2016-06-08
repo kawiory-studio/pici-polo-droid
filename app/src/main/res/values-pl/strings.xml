@@ -45,4 +45,5 @@
     <string name="new_game">Nowa gra</string>
     <string name="pick_yourself_a_name">Aby z nami grać, wybierz sobie imię.</string>
     <string name="waiting_for_cpart">Czekamy na Twojego przeciwnika. W międzyczasie zrób sobie kawę, albo zobacz swoje pozostałe gry.</string>
+    <string name="hotseat_game">Gorącokrzesłowa gra</string>
 </resources>
