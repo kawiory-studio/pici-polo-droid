@@ -16,7 +16,8 @@
         android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="38dp">
+        android:layout_marginTop="38dp"
+        android:id="@+id/linearLayout5">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -55,4 +56,26 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout5" >
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/listOfGames"
+            android:name="pl.dom3k.hermesb1.StopsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".Fragments.StopsFragment"
+            tools:listitem="@layout/single_game" />
+
+        </ScrollView>
 </RelativeLayout>
