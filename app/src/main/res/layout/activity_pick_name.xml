@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="In order to play with us, pick yourself a name."
+            android:text="@string/pick_yourself_a_name"
             android:id="@+id/textView11"
             android:layout_below="@+id/creat_name"
             android:layout_alignParentLeft="true" />
@@ -40,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/creat_name"
-            android:hint="Nick"
+            android:hint="@string/nick"
             android:layout_below="@+id/textView10"
             android:layout_alignParentLeft="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Begin"
+            android:text="@string/begin"
             android:id="@+id/go"
             android:layout_below="@+id/checkBox"
             android:layout_alignParentLeft="true"

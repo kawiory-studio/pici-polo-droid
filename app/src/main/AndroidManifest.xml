@@ -21,7 +21,7 @@
         <activity android:name=".GameCreatorActivity" />
         <activity android:name=".WaitingRoomActivity" />
         <activity android:name=".PickNameActivity" />
-        <activity android:name=".JoinGameActivity"></activity>
+        <activity android:name=".JoinGameActivity" />
     </application>
 
 </manifest>
