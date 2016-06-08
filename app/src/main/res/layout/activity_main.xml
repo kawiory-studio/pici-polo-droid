@@ -22,7 +22,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Game"
+            android:text="@string/new_game"
             android:id="@+id/button"
             android:background="#00ffffff"
             android:onClick="onNewGameClick" />
@@ -30,7 +30,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Continue (%d)"
+            android:text="@string/continue_d"
             android:id="@+id/button15"
             android:background="#00ffffff"
             android:onClick="onNewGameClick"
@@ -39,7 +39,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Join Game"
+            android:text="@string/join_game"
             android:id="@+id/button2"
             android:background="#00ffffff"
             android:onClick="onJoinGameClick" />
@@ -47,7 +47,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change name"
+            android:text="@string/change_name"
             android:id="@+id/button4"
             android:background="#00ffffff"
             android:onClick="onSettingsClick" />
@@ -55,7 +55,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How to play"
+            android:text="@string/how_to_play"
             android:id="@+id/button3"
             android:background="#00ffffff"
             android:onClick="onHowToClick" />
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pici Polo"
+        android:text="@string/pici_polo_title"
         android:id="@+id/textView"
         android:layout_marginTop="132dp"
         android:layout_alignParentTop="true"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="DELUXE"
+        android:text="@string/deluxe"
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />

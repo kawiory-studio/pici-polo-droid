@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Pici Polo Delux</string>
     <string name="action_settings">Ustawienia</string>
     <string name="begin">Rozpocznij</string>
     <string name="connection_success_notif" formatted="false">Połączono. Twój przeciwnik to %s</string>
@@ -36,4 +35,14 @@
     <string name="whose_last" formatted="false">Ruch gracza %s:</string>
     <string name="your_result_desc" formatted="false">Wylosowałeś znak %s, co daje Ci różnicę %s w wartości Twojej gry. Tura gracza %s.</string>
     <string name="your_turn_desc">Twoja tura. Wybierz numer.</string>
+    <string name="change_name">Zmień nazwę</string>
+    <string name="continue_d">Kontynuuj (%d)</string>
+    <string name="deluxe"></string>
+    <string name="game_begun_notif">Gra rozpoczęła się.</string>
+    <string name="here_comes_the_sun_placeholder" translatable="false"></string>
+    <string name="how_to_play">Jak grać?</string>
+    <string name="nick">Nick</string>
+    <string name="new_game">Nowa gra</string>
+    <string name="pick_yourself_a_name">Aby z nami grać, wybierz sobie imię.</string>
+    <string name="waiting_for_cpart">Czekamy na Twojego przeciwnika. W międzyczasie zrób sobie kawę, albo zobacz swoje pozostałe gry.</string>
 </resources>

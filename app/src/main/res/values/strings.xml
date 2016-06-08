@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pici Polo Delux</string>
+    <string name="app_name" translatable="false">Pici Polo Delux</string>
     <string name="title_activity_inside_game">Game Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -40,4 +40,15 @@
     <string name="number_ingame">Number</string>
     <string name="difference_ingame">Difference</string>
     <string name="sign_ingame">Sign</string>
+    <string name="game_begun_notif">The game begun.</string>
+    <string name="new_game">New Game</string>
+    <string name="continue_d">Continue (%d)</string>
+    <string name="join_game">Join Game</string>
+    <string name="change_name">Change name</string>
+    <string name="how_to_play">How to play</string>
+    <string name="pici_polo_title" translatable="false">Pici Polo</string>
+    <string name="deluxe" translatable="false">DELUXE</string>
+    <string name="pick_yourself_a_name">In order to play with us, pick yourself a name.</string>
+    <string name="nick">Nick</string>
+    <string name="waiting_for_cpart">Waiting for your counterpart. In meantime, make yourself a coffee, go see your other games, or stuff.</string>
 </resources>

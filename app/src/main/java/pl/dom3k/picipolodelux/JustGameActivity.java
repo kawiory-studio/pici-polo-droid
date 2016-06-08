@@ -117,7 +117,7 @@ public class JustGameActivity extends AppCompatActivity {
         whoseTurn.setText(stateParts[2]);
         firstCount.setText(stateParts[5]);
         secondCount.setText(stateParts[6]);
-        lastTurnPerson.setText("The game begun.");
+        lastTurnPerson.setText(R.string.game_begun_notif);
 
         String stateS = stateParts[2].equals(PlayerState.getUsername(getApplicationContext()))?
                 getString(R.string.your_turn_desc) : (String.format(getString(R.string.turn_for_desc),stateParts[2]));
