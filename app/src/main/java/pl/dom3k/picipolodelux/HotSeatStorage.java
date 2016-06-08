@@ -71,7 +71,6 @@ public class HotSeatStorage {
     /**
      * Returns state for given game.
      * @param gameName game name.
-     * @param playerName name of player who asks about game.
      * @return Returnable - State, Forbidden or Error.
      * @throws Exception
      */
