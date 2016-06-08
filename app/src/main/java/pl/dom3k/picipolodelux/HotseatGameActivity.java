@@ -52,8 +52,8 @@ public class HotseatGameActivity extends AppCompatActivity {
         String gameState = null;
 
         try {
-            gameState = ServerConnector.currState(gameName,getApplicationContext());
-        } catch (IOException e) {
+            gameState = HotSeatStorage.getResult(gameName);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -91,8 +91,8 @@ public class HotseatGameActivity extends AppCompatActivity {
         }
         String serverRes = null;
         try {
-            serverRes = ServerConnector.playersMove(gameName,Integer.parseInt(value),1,getApplicationContext());
-        } catch (IOException e) {
+            serverRes = HotSeatStorage.makeMove(gameName,Integer.parseInt(value),1);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if(serverRes==null) return;

@@ -75,7 +75,7 @@ public class HotSeatStorage {
      * @return Returnable - State, Forbidden or Error.
      * @throws Exception
      */
-    public static synchronized String getResult(String gameName,String playerName)throws Exception{
+    public static synchronized String getResult(String gameName)throws Exception{
         String output;
             HotSeatGame game;
             if ((game = hotSeatMap.get(gameName)) == null) return "error";
