@@ -2,13 +2,10 @@ package pl.dom3k.picipolodelux;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.io.IOException;
 
 public class HotseatGameActivity extends AppCompatActivity {
     TextView playerAName;
@@ -53,7 +50,7 @@ public class HotseatGameActivity extends AppCompatActivity {
         playerAName.setText(getIntent().getStringExtra("LEFTPNAME"));
         playerBName.setText(getIntent().getStringExtra("RIGHTPNAME"));
 
-        String gameState = null;
+            String gameState = null;
 
         try {
             gameState = HotSeatStorage.getResult(gameName);

@@ -75,8 +75,13 @@ public class ServerConnector {
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context),gameName));
     }
 
-    static String getPubsList(String gameName, Context context) throws IOException {
+    static String getPubsList(Context context) throws IOException {
         return serverDialogue(String.format("public:%s:%s:",
+                PlayerState.getUsername(context),PlayerState.getDeviceID(context)));
+    }
+
+    static String getYourList(Context context) throws IOException {
+        return serverDialogue(String.format("games:%s:%s:",
                 PlayerState.getUsername(context),PlayerState.getDeviceID(context)));
     }
 }

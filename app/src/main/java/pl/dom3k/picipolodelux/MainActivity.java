@@ -10,12 +10,14 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Context context = getApplicationContext();
+        context = getApplicationContext();
 
         try {
             if(PlayerState.getUsername(context)==null||

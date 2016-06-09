@@ -21,8 +21,18 @@ public class JoinGameActivity extends AppCompatActivity {
 
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.listOfGames);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setAdapter(new GameListRecyclerViewAdapter());
+        if (recyclerView != null) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        }
+        try {
+            recyclerView.setAdapter(new GameListRecyclerViewAdapter(
+                    HotSeatStorage.listPublic(),
+                    ServerConnector.getYourList(getApplicationContext()),
+                    ServerConnector.getPubsList(getApplicationContext()))
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onJoinClick(View view){

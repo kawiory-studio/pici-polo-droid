@@ -98,7 +98,7 @@ public class HotSeatStorage {
                 tabNum[i] = game.getPlayersCount();
                 tabMax[i++] = game.getMaxPlayers();
             }
-        StringBuilder sB = new StringBuilder().append("public:");
+        StringBuilder sB = new StringBuilder().append("hotseat:");
         for (i=0;i<tab.length;i++){
             sB.append(tab[i]).append(",").append(tabNum[i]).append("|").append(tabMax[i]).append(":");
         }
