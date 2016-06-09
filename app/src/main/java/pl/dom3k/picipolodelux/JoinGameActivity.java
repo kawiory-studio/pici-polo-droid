@@ -21,9 +21,8 @@ public class JoinGameActivity extends AppCompatActivity {
 
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.listOfGames);
-        if (recyclerView != null) {
-            recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        }
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
         try {
             recyclerView.setAdapter(new GameListRecyclerViewAdapter(
                     HotSeatStorage.listPublic(),
@@ -34,6 +33,8 @@ public class JoinGameActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+
 
     public void onJoinClick(View view){
         Log.e("butt","Click!");

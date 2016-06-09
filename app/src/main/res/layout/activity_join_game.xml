@@ -68,13 +68,13 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/listOfGames"
-            android:name="pl.dom3k.hermesb1.StopsFragment"
+            android:name="pl.dom3k.hermesb1.JoinGameActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             app:layoutManager="LinearLayoutManager"
-            tools:context=".Fragments.StopsFragment"
+            tools:context=".Fragments.JoinGameActivity"
             tools:listitem="@layout/single_game" />
 
         </ScrollView>
