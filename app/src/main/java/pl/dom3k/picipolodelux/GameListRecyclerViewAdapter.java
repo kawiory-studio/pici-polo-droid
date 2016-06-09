@@ -2,6 +2,7 @@ package pl.dom3k.picipolodelux;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,11 +68,15 @@ public class GameListRecyclerViewAdapter extends RecyclerView.Adapter<GameListRe
 
         MyGame(String listString){
             String[] splitted = listString.split(",");
+            Log.e("fromServer",listString);
             name = splitted[0];
             String players = splitted[1];
-            playerCount = Integer.parseInt(players.split("|")[0]);
-            maxPlayers  = Integer.parseInt(players.split("|")[1]);
-            whoseTurn   = splitted[2];
+            Log.e("befSplit",players);
+            Log.e("aftSplit",players.split("\\|")[0]);
+            Log.e("aftSplit",players.split("\\|")[1]);
+            playerCount = Integer.parseInt(players.split("\\|")[0]);
+            maxPlayers  = Integer.parseInt(players.split("\\|")[1]);
+            whoseTurn   = splitted.length>2?splitted[2]:"";
         }
 
         @Override
@@ -110,8 +115,8 @@ public class GameListRecyclerViewAdapter extends RecyclerView.Adapter<GameListRe
             String[] splitted = listString.split(",");
             name = splitted[0];
             String players = splitted[1];
-            playerCount = Integer.parseInt(players.split("|")[0]);
-            maxPlayers  = Integer.parseInt(players.split("|")[1]);
+            playerCount = Integer.parseInt(players.split("\\|")[0]);
+            maxPlayers  = Integer.parseInt(players.split("\\|")[1]);
         }
 
         @Override
