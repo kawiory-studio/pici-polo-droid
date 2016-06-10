@@ -1,11 +1,14 @@
 package pl.dom3k.picipolodelux;
 
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -146,8 +149,10 @@ public class GameListRecyclerViewAdapter extends RecyclerView.Adapter<GameListRe
     }
 
     ArrayList<ListableGame> listOvGames;
+    AppCompatActivity joinGameActivity;
 
-    public GameListRecyclerViewAdapter(String hotSeatGames, String yourGames, String publicGames){
+    public GameListRecyclerViewAdapter(String hotSeatGames, String yourGames, String publicGames, AppCompatActivity activity){
+        joinGameActivity = activity;
         listOvGames = new ArrayList<>();
         String[] hotSeatsList = hotSeatGames.split(":");
         String[] yourList = yourGames.split(":");
@@ -182,6 +187,18 @@ public class GameListRecyclerViewAdapter extends RecyclerView.Adapter<GameListRe
         else
             holder.gameStatus.setText(String.format("%d/%d",
                     curr.getPlayerCount(),curr.getMaxPlayers()));
+
+
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText et = (EditText) joinGameActivity.findViewById(R.id.game_name);
+                TextView name = (TextView) v.findViewById(R.id.gameName) ;
+                Button click = (Button) joinGameActivity.findViewById(R.id.joinbutt);
+                et.setText(name.getText());
+                click.performClick();
+            }
+        });
 
     }
 

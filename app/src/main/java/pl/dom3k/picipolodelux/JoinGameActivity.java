@@ -27,7 +27,7 @@ public class JoinGameActivity extends AppCompatActivity {
             recyclerView.setAdapter(new GameListRecyclerViewAdapter(
                     HotSeatStorage.listPublic(),
                     ServerConnector.getYourList(getApplicationContext()),
-                    ServerConnector.getPubsList(getApplicationContext()))
+                    ServerConnector.getPubsList(getApplicationContext()),this)
             );
         } catch (Exception e) {
             e.printStackTrace();
